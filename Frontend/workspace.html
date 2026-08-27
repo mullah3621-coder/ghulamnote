@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhulamNote - Workspace</title>
+    <link rel="stylesheet" href="css/workspace.css">
+    <!-- Quill.js CSS -->
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Toolbar -->
+    <header class="workspace-header">
+        <div class="header-left">
+            <a href="dashboard.html" class="btn-back">← Dashboard</a>
+            <span id="docTitle" class="doc-title">Loading...</span>
+        </div>
+        <div class="header-center">
+            <button id="prevPage" class="pdf-btn" disabled>◀ Prev</button>
+            <span class="page-info">Page <span id="currentPage">1</span> / <span id="totalPages">1</span></span>
+            <button id="nextPage" class="pdf-btn" disabled>Next ▶</button>
+        </div>
+        <div class="header-right">
+            <span id="saveStatus" class="save-status">Saved</span>
+        </div>
+    </header>
+
+    <!-- Split Screen Container -->
+    <main class="workspace-container">
+        <!-- Left: PDF Viewer -->
+        <section class="pdf-panel">
+            <div class="pdf-wrapper" id="pdfWrapper">
+                <canvas id="pdfCanvas"></canvas>
+            </div>
+        </section>
+
+        <!-- Right: Notes Editor -->
+        <section class="notes-panel">
+            <div class="notes-header">
+                <h3>Notes - Page <span id="notePageNum">1</span></h3>
+                <div class="ai-buttons">
+                    <button id="summarizeBtn" class="btn-ai">✨ Summarize</button>
+                </div>
+            </div>
+            <div id="quillEditor"></div>
+            <div class="ai-chat">
+                <input type="text" id="aiInput" placeholder="Ask AI about this document...">
+                <button id="askAiBtn" class="btn-ai-send">Ask</button>
+            </div>
+            <div id="aiResponse" class="ai-response"></div>
+        </section>
+    </main>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <!-- Quill.js -->
+    <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+    <!-- App Scripts -->
+    <script src="js/pdfViewer.js"></script>
+    <script src="js/notesEditor.js"></script>
+    <script src="js/workspace.js"></script>
+</body>
+</html>

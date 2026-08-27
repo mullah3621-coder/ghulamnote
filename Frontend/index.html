@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhulamNote - AI-Powered Note Taking for Students</title>
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"/>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">GhulamNote</span>
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <div class="tab-switcher" id="tabSwitcher">
+                    <button class="tab-btn active" data-tab="student">
+                        <span class="tab-icon">👨‍🎓</span>
+                        <span class="tab-label">Student</span>
+                    </button>
+                    <button class="tab-btn" data-tab="teacher">
+                        <span class="tab-icon">🧑‍🏫</span>
+                        <span class="tab-label">Teacher</span>
+                    </button>
+                    <button class="tab-btn" data-tab="researcher">
+                        <span class="tab-icon">🔬</span>
+                        <span class="tab-label">Researcher</span>
+                    </button>
+                    <button class="tab-btn" data-tab="institution">
+                        <span class="tab-icon">🏫</span>
+                        <span class="tab-label">Institution</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="chevron">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="login.html" class="btn-ghost">Sign in</a>
+                <a href="login.html" class="btn-solid">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="mesh-gradient"></div>
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge" id="heroBadge">
+                <span class="badge-pulse"></span>
+                <span id="badgeText">AI-Powered Learning</span>
+            </div>
+
+            <h1 class="hero-title" id="heroTitle">
+                Meet GhulamNote AI<br>and ace your exams
+            </h1>
+
+            <p class="hero-subtitle" id="heroSubtitle">
+                Be better prepared for your exams and score higher ✨
+            </p>
+
+            <div class="hero-cta">
+                <a href="login.html" class="btn-cta">
+                    <span>➔</span>
+                    <span>Get started</span>
+                </a>
+                <a href="#features" class="btn-learn">
+                    Learn more
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Mockup -->
+        <div class="mockup-wrapper" id="mockupWrapper">
+            <div class="mockup-container">
+                <div class="mockup-header">
+                    <div class="window-controls">
+                        <span class="wc-dot wc-close"></span>
+                        <span class="wc-dot wc-minimize"></span>
+                        <span class="wc-dot wc-maximize"></span>
+                    </div>
+                    <div class="window-url">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lock-icon">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        <span>app.ghulamnote.com/workspace</span>
+                    </div>
+                    <div class="window-actions">
+                        <span class="wa-dot"></span>
+                        <span class="wa-dot"></span>
+                    </div>
+                </div>
+                <div class="mockup-body">
+                    <img src="workspace.png" alt="GhulamNote Workspace" class="mockup-img" id="mockupImg">
+                    <div class="mockup-fallback" id="mockupFallback">
+                        <div class="fallback-content">
+                            <div class="fallback-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                            </div>
+                            <p>Your workspace preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 60C240 120 480 0 720 60C960 120 1200 0 1440 60V120H0V60Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted" id="trusted">
+        <div class="container">
+            <p class="trusted-label">Trusted by students worldwide</p>
+            <div class="trusted-logos">
+                <div class="logo-item">🎓 Harvard</div>
+                <div class="logo-item">🏛 MIT</div>
+                <div class="logo-item">📚 Stanford</div>
+                <div class="logo-item">🎓 Oxford</div>
+                <div class="logo-item">🏛 Cambridge</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Features</span>
+                <h2 class="section-title">Everything you need to excel</h2>
+                <p class="section-subtitle">Powerful tools designed to transform the way you study and take notes</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card bento-large">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Smart AI Summaries</h3>
+                    <p>Get instant, intelligent summaries of any document page. Our Gemini-powered AI condenses complex content into clear, digestible notes.</p>
+                    <div class="bento-visual summary-visual">
+                        <div class="summary-line long"></div>
+                        <div class="summary-line medium"></div>
+                        <div class="summary-line short"></div>
+                        <div class="summary-arrow">→</div>
+                        <div class="summary-result">
+                            <div class="result-line"></div>
+                            <div class="result-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Seamless Note Sync</h3>
+                    <p>Notes auto-save every 5 seconds and sync perfectly with your PDF page position. Never lose a thought.</p>
+                    <div class="bento-visual sync-visual">
+                        <div class="sync-dot"></div>
+                        <div class="sync-line"></div>
+                        <div class="sync-dot active"></div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="bento-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>PDF Annotation</h3>
+                    <p>View PDFs side-by-side with your notes. Navigate pages and take context-aware notes effortlessly.</p>
+                    <div class="bento-visual pdf-visual">
+                        <div class="pdf-page">
+                            <div class="pdf-line"></div>
+                            <div class="pdf-line short"></div>
+                            <div class="pdf-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Ready to transform your studying?</h2>
+                <p>Join thousands of students already using GhulamNote to ace their exams.</p>
+                <a href="login.html" class="btn-cta-large">
+                    <span>Get started for free</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                        <polyline points="12 5 19 12 12 19"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon small">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9"/>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                            </svg>
+                        </div>
+                        <span>GhulamNote</span>
+                    </a>
+                    <p class="footer-desc">AI-powered note-taking for smarter studying.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Changelog</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GhulamNote. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="GitHub">GH</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+</body>
+</html>
